@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_social_networks",
+  "info": {
+    "displayName": "socialNetwork"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links"
+    }
+  }
+}

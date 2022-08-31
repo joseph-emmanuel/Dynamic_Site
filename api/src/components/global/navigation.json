@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_global_navigations",
+  "info": {
+    "displayName": "Navigation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mainLink": {
+      "displayName": "Links",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links"
+    },
+    "subLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
