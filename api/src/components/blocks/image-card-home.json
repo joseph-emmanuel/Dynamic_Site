@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_image_card_homes",
+  "info": {
+    "displayName": "ImageCardHome",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cardImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cardLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.links"
+    }
+  }
+}
