@@ -5,7 +5,7 @@ function Navigation({ data }) {
   // console.log("mainlink data", data["mainLink"]);
   return (
     <div className={`${style.main_container} `}>
-      <div className="max-w-[8%]">
+      <div className="max-w-[8%] my-auto">
         <img
           src={`http://localhost:1337${data["logo"]["data"]["attributes"]["url"]} `}
           alt=""

@@ -1,0 +1,4 @@
+.main_container{
+
+    @apply px-8 justify-center mx-auto flex flex-row ;
+}
