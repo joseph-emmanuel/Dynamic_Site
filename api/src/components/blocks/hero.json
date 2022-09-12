@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "angle-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heroHeading": {
+      "type": "string"
+    },
+    "heroSubHeading": {
+      "type": "string"
+    },
+    "heroTextColor": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    }
+  }
+}

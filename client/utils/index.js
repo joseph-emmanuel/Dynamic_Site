@@ -29,7 +29,7 @@ export function redirectToHomepage() {
 // This function will build the url to fetch on the Strapi API
 export function getData(slug, locale) {
   const slugToReturn = `/${slug}?lang=${locale}`;
-  const apiUrl = `/pages?populate=deep&slug=${slug}&_locale=${locale}`;
+  const apiUrl = `/pages?populate=deep&filters[slug][$eq]=${slug}`;
 
   return {
     data: getStrapiURL(apiUrl),

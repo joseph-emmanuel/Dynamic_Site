@@ -6,10 +6,12 @@ function Navigation({ data }) {
   return (
     <div className={`${style.main_container} `}>
       <div className="max-w-[8%] my-auto">
-        <img
-          src={`http://localhost:1337${data["logo"]["data"]["attributes"]["url"]} `}
-          alt=""
-        />
+        <a href={`/${data["logoLink"]}`}>
+          <img
+            src={`http://localhost:1337${data["logo"]["data"]["attributes"]["url"]} `}
+            alt=""
+          />
+        </a>
       </div>
       <ul className="flex flex-row my-auto max-w-[400px] gap-4">
         {data["mainLink"].map((element, index) => {

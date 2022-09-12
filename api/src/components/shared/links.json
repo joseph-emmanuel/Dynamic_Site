@@ -25,6 +25,9 @@
     },
     "isIcon": {
       "type": "boolean"
+    },
+    "subHead": {
+      "type": "string"
     }
   }
 }

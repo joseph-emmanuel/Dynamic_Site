@@ -1,8 +1,8 @@
 import { CopyBlock, nord } from "react-code-blocks";
 import style from "../ImageCardHome/ImageCardHome.module.css";
 
-const ImageCardHome = ({ id, cardImage, cardLink, modalName }) => {
-  console.log("Link is :", cardLink);
+const ImageCardHome = ({ id, cardImage, cardLink, modalName, subHeading }) => {
+  // console.log("Link is :", cardLink["subHead"]);
   // const ImageCardHome = ({ title, text, theme, commandLine }) => {
   //   console.log(
   //     "title, text, theme, commandLine : ",
@@ -13,14 +13,24 @@ const ImageCardHome = ({ id, cardImage, cardLink, modalName }) => {
   //   );
   return (
     <div className="relative">
-      <div class="centered text-black ">
-        <h1 className={`${style.heading} ml-14`}>{modalName}</h1>
-        <p className={`${style.subHeading} `}>
+      <div class="centered text-black flex flex-col justify-center  items-center ">
+        <h1 className={`${style.heading} `}>{modalName}</h1>
+        {/* <p className={`${style.subHeading} `}>
           {cardLink["label"].split(" ").slice(0, 3).join(" ")}{" "}
           <a href={`${cardLink["href"]}`} className="underline">
             {cardLink["label"].split(" ").splice(-2).join(" ")}
           </a>
-        </p>
+        </p> */}
+        {subHeading !== "" ? (
+          <p className={`${style.subHeading} `}>
+            {cardLink["subHead"]}
+            {cardLink["label"] !== "" ? (
+              <a href={`${cardLink["href"]}`} className="underline">
+                {cardLink["label"]}
+              </a>
+            ) : null}
+          </p>
+        ) : null}
       </div>
       {/* <h1 className="max-w-[200px] m-auto">{modalName}</h1> */}
       <img
@@ -28,26 +38,6 @@ const ImageCardHome = ({ id, cardImage, cardLink, modalName }) => {
         alt=""
       />
     </div>
-
-    // <div className={`bg-${theme}`}>
-    //   <div className="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-    //     <h2 className={`text-3xl font-extrabold text-black sm:text-4xl`}>
-    //       {title && <span className="block">{title}</span>}
-    //       {text && <span className={`block text-white`}>{text}</span>}
-    //     </h2>
-    //     <div className="py-12 lg:flex-shrink-0 flex items-center justify-center">
-    //       <div className="block md:w-2/5 w-full shadow-2xl text-center">
-    //         <CopyBlock
-    //           text={commandLine}
-    //           language="bash"
-    //           codeBlock
-    //           theme={nord}
-    //           showLineNumbers={false}
-    //         />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

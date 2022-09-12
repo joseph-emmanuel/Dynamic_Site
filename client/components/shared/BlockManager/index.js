@@ -1,16 +1,17 @@
 import ImageCardHome from "../../blocks/ImageCardHome";
+import Hero from "../../blocks/Hero";
 
 const getBlockComponent = ({ __component, ...rest }, index) => {
-  console.log("my component is : ", __component);
+  // console.log("my component is : ", __component);
   let Block;
 
   switch (__component) {
     case "blocks.image-card-home":
       Block = ImageCardHome;
       break;
-    // case "blocks.pricing":
-    //   Block = Pricing;
-    //   break;
+    case "blocks.hero":
+      Block = Hero;
+      break;
     // case "blocks.cta-command-line":
     //   Block = CtaCommandLine;
     //   break;

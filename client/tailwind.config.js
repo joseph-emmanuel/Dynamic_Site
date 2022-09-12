@@ -17,6 +17,8 @@ module.exports = {
         off: "#F5F5F5",
       },
       red: "#990000",
+      primary: "#181A1F",
+      secondary: "#FFFFFF",
     },
     fontFamily: {
       rubik: ["Rubik", "sans-serif"],

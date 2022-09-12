@@ -34,10 +34,12 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { slug, locale } = getLocalizedParams(context.query);
   const slug2 = context.params.slug;
-  console.log("locale :", locale);
+  // console.log("locale :", locale);
   const data = getData(slug2, locale);
+  // console.log("data url is", data);
   const res = await fetch(delve(data, "data"));
   const json = await res.json();
+  // console.log("first json is : ", delve(json, slug2));
   const pageData = await getDataDependencies(json["data"][0]["attributes"]);
   return {
     props: { pageData },
@@ -45,3 +47,4 @@ export async function getStaticProps(context) {
 }
 
 export default Universals;
+// json["data"][0]["attributes"] delve(json,slug2)
