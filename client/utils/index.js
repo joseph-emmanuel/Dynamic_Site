@@ -29,10 +29,20 @@ export function redirectToHomepage() {
 // This function will build the url to fetch on the Strapi API
 export function getData(slug, locale) {
   const slugToReturn = `/${slug}?lang=${locale}`;
-  const apiUrl = `/pages?slug=${slug}&_locale=${locale}`;
+  const apiUrl = `/pages?populate=deep&slug=${slug}&_locale=${locale}`;
 
   return {
     data: getStrapiURL(apiUrl),
     slug: slugToReturn,
+  };
+}
+// This function is create dataurl for the paths of the pages
+export function getDataUrl() {
+  // const slugToReturn = `/${slug}?lang=${locale}`;
+  const apiUrl = `/pages?populate=deep`;
+
+  return {
+    data: getStrapiURL(apiUrl),
+    // slug: slugToReturn,
   };
 }

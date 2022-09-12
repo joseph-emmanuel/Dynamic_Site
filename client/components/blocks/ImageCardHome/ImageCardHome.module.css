@@ -1,0 +1,6 @@
+.heading{
+    @apply font-rubik text-[40px] text-black-medium;
+}
+.subHeading{
+    @apply font-rubik text-[14px] text-black-light p-[5px];
+}

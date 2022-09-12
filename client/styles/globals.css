@@ -28,3 +28,14 @@ a {
     background: black;
   }
 }
+
+
+.centered {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.headingHome{
+  --tcl-homepage-hero-heading-font-size-desktop:40px; --tcl-homepage-hero-heading-font-size-mobile:36px;
+}
